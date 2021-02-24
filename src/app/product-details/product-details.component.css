@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  margin-top: 50px;
+}
+
+.description {
+  margin-left: 150px;
+}
+
+.main {
+  overflow: hidden;
+  display: inline-block;
+  width: 500px;
+}
+
+.main img {
+  width: 100%;
+  height: auto;
+}
+
+.preview-image img {
+  display: flex;
+  height: 100px;
+}

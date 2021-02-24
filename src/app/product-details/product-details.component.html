@@ -1,0 +1,34 @@
+<h2>Product Details</h2>
+
+<div class="container">
+  <div class="gallery">
+    <div class="main">
+      <img [src]="product.main" />
+    </div>
+    <div class="preview-image" *ngFor="let img of product.image">
+      <img class="preview-image" [src]="img" (mouseenter)="switch(img)" />
+    </div>
+  </div>
+  <div class="description">
+    <h3>
+      <a [title]="product.name" [href]="product.link" target="_blank">
+        {{ product.name }}
+      </a>
+    </h3>
+    <h4>
+      Rating:
+      <span>
+        {{ product.rating }}
+      </span>
+    </h4>
+    <p *ngIf="product.description">
+      Description: {{ product.description }}
+    </p>
+    <a [href]="product.share" target="_blank">
+      <button (click)="share()">
+        Share
+      </button>
+    </a>
+    <button (click)="addToCart(product)">Buy</button>
+  </div>
+</div>
